@@ -30,3 +30,12 @@ Our solution for this Kaggle competition was a weighted ensemble of efficient ne
 - Application of 2-step training on each model, involving training on the entire dataset and fine-tuning on a subset with a higher number of voters. Recognizing the potential quality disparity within the dataset, we adopted a two-step training approach to refine our models on higher quality data.
 
 (Note: Direct Fine-tuning is not possible for CatBoost, hence high-quality data was added twice for training purposes).
+
+Weights for the weighted average was calculated via training 1 layer CNN 
+
+| Models(in 2 Stage training) | Public LB| Private LB|
+|-----------------|-----------------|-----------------|
+| Weighted Ensemble| 0.30 | 0.36 |
+| Efficient b0 | 0.31 | 0.38 |
+| Wavenet| 0.37 | 0.48 |
+| Catboost| 0.51 | 0.60 |
